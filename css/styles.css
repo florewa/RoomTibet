@@ -35,7 +35,7 @@
 }
 
 .start {
-    background-image: url("../img/Rectangle 1.png");
+    background-image: url("../img/Rectangle 1.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -472,7 +472,7 @@ select option {
 }
 
 .title-item {
-    text-align: left;
+    text-align: center;
 }
 
 .blog-post {
@@ -918,6 +918,7 @@ select option {
 
     .title-item {
         align-items: flex-start;
+        text-align: left;
     }
 
     .pictures {
