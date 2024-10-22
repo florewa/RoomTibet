@@ -473,6 +473,7 @@ select option {
 
 .title-item {
     text-align: center;
+    text-align: left;
 }
 
 .blog-post {
