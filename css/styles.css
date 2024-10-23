@@ -12,6 +12,7 @@
 .button {
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
     border: 1px solid #1a3e3e;
     border-radius: 4px;
@@ -35,6 +36,7 @@
 }
 
 .start {
+    width: 100%;
     background-image: url("../img/Rectangle 1.jpg");
     background-position: center center;
     background-size: cover;
@@ -60,8 +62,37 @@
     align-items: center;
 }
 
-.burger-btn, .burger-menu {
+.burger-btn {
     display: none;
+}
+
+.burger-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: var(--green);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 16px;
+    transition: right 0.3s ease;
+}
+
+.close-btn {
+    padding-top: 16px;
+    align-self: flex-end;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+.burger-menu .menu-item{
+    display: flex;
+    gap: 8px;
 }
 
 .menu-item {
@@ -730,13 +761,7 @@ select option {
     color: var(--yellow);
 }
 
-.title-left {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 120%;
-}
-
-.title-right {
+.lists-title{
     font-weight: 700;
     font-size: 20px;
     line-height: 120%;
@@ -802,6 +827,10 @@ select option {
         cursor: pointer;
     }
 
+    .burger-menu.active {
+        display: flex;
+    }
+
     .about-wrapper {
         flex-direction: column-reverse;
         align-items: flex-start;
@@ -860,12 +889,8 @@ select option {
         flex: 1 1 auto;
     }
 
-    .email-button {
-        flex: 1;
-    }
-
     .input-email {
-        width: 50%;
+        width: 100%;
     }
 
     .footer-wrapper {
@@ -923,7 +948,8 @@ select option {
 
     .pictures {
         display: flex;
-        overflow: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
         width: calc(100vw - 16px);
         padding-right: 16px;
     }
